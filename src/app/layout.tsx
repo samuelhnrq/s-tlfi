@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Serif, Modern_Antiqua } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const modernAntiqua = Modern_Antiqua({
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const blexSerif = IBM_Plex_Serif({
+  weight: "500",
   subsets: ["latin"],
 });
 
@@ -24,8 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>S/TLFi</title>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${modernAntiqua.className} ${blexSerif.className} antialiased`}
       >
         {children}
       </body>

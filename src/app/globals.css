@@ -3,6 +3,6 @@
 @plugin "daisyui";
 
 @theme {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "IBM Plex Serif", serif;
+  --font-display: "Modern Antiqua", serif;
 }
