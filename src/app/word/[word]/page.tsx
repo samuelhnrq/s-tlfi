@@ -1,28 +1,27 @@
-import { load } from "cheerio";
-import ky from "ky";
-import sanitize from "sanitize-html";
+import { lookupWord } from "@/tlfi-client";
+import WordDisplay from "./word-display";
 
 export const revalidate = 60;
 export const dynamicParams = true; // or false, to 404 on unknown paths
 
 async function WordDetail({ params }: { params: Promise<{ word: string }> }) {
   const { word } = await params;
-  const definition = await ky(`https://www.cnrtl.fr/definition/${word}`).text();
-  const $ = load(definition);
-  const content = $("#lexicontent").html();
-  if (!content) {
-    return "No Content";
-  }
-  return (
-    <>
-      <h1 className="font-display text-6xl ml-4 my-10 truncate capitalize">
-        {word}
+  const definition = await lookupWord(word);
+  return definition.map((x) => (
+    <div key={x.name}>
+      <h1
+        className="font-display text-6xl ml-4 my-10 truncate capitalize"
+        style={{ lineHeight: 1.2 }}
+      >
+        {x.name}
       </h1>
       <div className="card bg-base-200/40 p-4 rounded-lg backdrop-blur-xs">
-        <div dangerouslySetInnerHTML={{ __html: sanitize(content) }}></div>
+        {x.usages.map((x) => (
+          <WordDisplay key={x.ordering} usage={x} />
+        ))}
       </div>
-    </>
-  );
+    </div>
+  ));
 }
 
 export default WordDetail;
