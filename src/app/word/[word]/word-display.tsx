@@ -8,25 +8,31 @@ function WordDisplay({
   usage: Usage;
   ordering?: string;
 }) {
-  const ord = `${ordering} ${usage.ordering}`;
+  const ord = `${ordering ? ordering + ". " : ""} ${usage.ordering}`;
+  const hasValue = !!usage.definition || usage.crochet;
   return (
-    <div className={clsx({ "mb-4 mt-5": !!usage.definition })}>
-      {!!usage.definition && ord} {usage.crochet}
+    <div className={clsx({ "mb-4 mt-5": hasValue })}>
+      {hasValue && (
+        <>
+          {ord} <i>{usage.crochet}</i>
+        </>
+      )}
+      {usage.definition && " - "}
       {usage.definition}
       {usage.examples.length > 0 && (
-        <>
-          <div className="font-bold">Par example...</div>
-          <ul className="list">
+        <div className="ml-3">
+          <div className="font-bold mt-2 text-lg">Par example...</div>
+          <ul className="list list-disc">
             {usage.examples.map((x, i) => (
               <li key={i} className="ml-3 list-item">
-                - {x.text} by {x.author} on {x.works} at {x.date}
+                {x.text} by {x.author} on {x.works} at {x.date}
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
       {usage.subUsages && usage.subUsages.length > 0 && (
-        <div className="pl-8">
+        <div className="ml-8">
           {usage.subUsages?.map((x) => (
             <WordDisplay usage={x} key={x.ordering} ordering={ord} />
           ))}

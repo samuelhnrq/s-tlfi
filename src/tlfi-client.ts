@@ -35,9 +35,9 @@ type Example = z.infer<typeof example>;
 function clearStr(txt: string): string {
   return txt
     .replaceAll(/\s{2,}/g, " ")
-    .replaceAll(/[,\.-]{2,}|\s[,\.-]\s/gm, "")
+    .replaceAll(/[,\.-]{2,}|\s+[,\.-]+\s+/gm, "")
     .trim()
-    .replaceAll(/^[)(,\.]+\s*|\s*[)(,\.]+$/gm, " ");
+    .replaceAll(/^[)(,\.−]+\s*|\s*[)(,\.−]+$/gm, " ");
 }
 
 function toExample(elem: Cheerio<AnyNode>): Example {
@@ -56,7 +56,7 @@ function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
   return {
     crochet: elem.children(".tlf_ccrochet").text(),
     definition: clearStr(elem.children(".tlf_cdefinition").first().text()),
-    ordering: elem.children(".tlf_cplan").text(),
+    ordering: clearStr(elem.children(".tlf_cplan").text()),
     footnotes: clearStr(elem.children(".tlf_parothers").text()),
     subUsages: [],
     examples: elem
@@ -68,9 +68,9 @@ function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
 
 function extractUsages(parent: Cheerio<AnyNode>): Usage[] {
   const usages: Usage[] = [];
-  if (parent.children(".tlf_cdefinition").length > 0) {
-    usages.push(toBaseUsage(parent));
-  }
+  // if (parent.children(".tlf_cdefinition").length > 0) {
+  //   usages.push(toBaseUsage(parent));
+  // }
   for (const usageElem of parent.children(".tlf_parah")) {
     const elem = parent.find(usageElem);
     const subs = elem.children(".tlf_parah").toArray();

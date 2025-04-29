@@ -20,10 +20,10 @@ function WordSearch() {
         name="word"
         required
         className="input"
-        aria-description="Search a word"
-        placeholder="Type a word"
+        aria-description="Cherchez"
+        placeholder="Taper une mot"
       />
-      <button className="btn btn-primary">Search</button>
+      <button className="btn btn-primary">Cherchez</button>
     </form>
   );
 }

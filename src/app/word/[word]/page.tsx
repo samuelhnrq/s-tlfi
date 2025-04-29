@@ -10,10 +10,10 @@ async function WordDetail({ params }: { params: Promise<{ word: string }> }) {
   return definition.map((x) => (
     <div key={x.name}>
       <h1
-        className="font-display text-6xl ml-4 my-10 truncate capitalize"
+        className="font-display text-6xl ml-6 mb-8 mt-12 truncate capitalize"
         style={{ lineHeight: 1.2 }}
       >
-        {x.name}
+        {x.name.toLocaleLowerCase()}
       </h1>
       <div className="card bg-base-200/40 p-4 rounded-lg backdrop-blur-xs">
         {x.usages.map((x) => (
