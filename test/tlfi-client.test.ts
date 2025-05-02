@@ -58,7 +58,7 @@ it("Should parse things correctly", async (t) => {
     .and.property("0")
     .to.be.an("object")
     .and.include({
-      ordering: "I.−",
+      ordering: "I",
       crochet: "[Le suj. désigne un animé]",
       definition: "Donner l'être, l'existence à, être l'auteur de",
     })

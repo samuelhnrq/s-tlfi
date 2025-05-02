@@ -4,14 +4,14 @@ exports[`Should parse things correctly 1`] = `
     "name": "FAIRE",
     "usages": [
       {
-        "ordering": "I.−",
+        "ordering": "I",
         "crochet": "[Le suj. désigne un animé]",
         "definition": "Donner l'être, l'existence à, être l'auteur de",
         "examples": [],
         "footnotes": "",
         "subUsages": [
           {
-            "ordering": "A.−",
+            "ordering": "A",
             "crochet": "[Le suj. désigne Dieu; l'obj. désigne un animé ou un inanimé]",
             "definition": "Créer, donner l'être et la vie à",
             "examples": [
@@ -29,47 +29,17 @@ exports[`Should parse things correctly 1`] = `
               }
             ],
             "footnotes": "",
-            "subUsages": [
-              {
-                "ordering": "A.−",
-                "crochet": "[Le suj. désigne Dieu; l'obj. désigne un animé ou un inanimé]",
-                "definition": "Créer, donner l'être et la vie à",
-                "examples": [
-                  {
-                    "text": "Dieu fit le ciel et la terre; Dieu a fait l'homme à son image. Ce n'est pas nous qui avons fait le ciel et la terre",
-                    "author": "",
-                    "works": "",
-                    "date": ""
-                  },
-                  {
-                    "text": "« Me voilà, tel que Dieu m'a fait! »",
-                    "author": "",
-                    "works": "",
-                    "date": ""
-                  }
-                ],
-                "footnotes": "",
-                "subUsages": []
-              }
-            ]
+            "subUsages": []
           },
           {
-            "ordering": "B.−",
+            "ordering": "B",
             "crochet": "[Le suj. et l'obj. désignent un animé]",
             "definition": "Donner naissance à",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "B.−",
-                "crochet": "[Le suj. et l'obj. désignent un animé]",
-                "definition": "Donner naissance à",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[Le suj. désigne des pers.]",
                 "definition": "Donner la vie à",
                 "examples": [
@@ -89,7 +59,7 @@ exports[`Should parse things correctly 1`] = `
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[Le suj. désigne une femme]",
                     "definition": "",
                     "examples": [],
@@ -97,7 +67,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[Le suj. désigne un homme]",
                     "definition": "La rendre enceinte",
                     "examples": [
@@ -115,34 +85,12 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "[Le suj. désigne un homme]",
-                        "definition": "La rendre enceinte",
-                        "examples": [
-                          {
-                            "text": "Si je ne prenais pas mes précautions, il me ferait un gosse à tous coups",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Ma jeune femme me portait l'affection la plus tendre, je lui faisais de beaux enfants bien sains, deux fils et une fille",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[Le suj. désigne la femelle d'un animal]",
                 "definition": "Mettre bas",
                 "examples": [],
@@ -150,7 +98,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "[Le suj. désigne une plante]",
                 "definition": "",
                 "examples": [
@@ -167,28 +115,28 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "C.−",
+            "ordering": "C",
             "crochet": "[L'obj. désigne un inanimé concr.]",
             "definition": "",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[Le suj. désigne un animé]",
                 "definition": "Produire (par une fonction naturelle de l'organisme",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[Le suj. désigne une pers.]",
                     "definition": "",
                     "examples": [],
                     "footnotes": "",
                     "subUsages": [
                       {
-                        "ordering": "α)",
+                        "ordering": "α",
                         "crochet": "",
                         "definition": "Avoir les dents qui poussent",
                         "examples": [
@@ -203,7 +151,7 @@ exports[`Should parse things correctly 1`] = `
                         "subUsages": []
                       },
                       {
-                        "ordering": "β)",
+                        "ordering": "β",
                         "crochet": "",
                         "definition": "Uriner ou évacuer des matières fécales",
                         "examples": [
@@ -232,26 +180,17 @@ exports[`Should parse things correctly 1`] = `
                     ]
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[Le suj. désigne un animal]",
                     "definition": "Évacuer des excréments",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "[Le suj. désigne un animal]",
-                        "definition": "Évacuer des excréments",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[Le suj. désigne un animé ou un inanimé concr.]",
                 "definition": "Produire, émettre",
                 "examples": [
@@ -268,22 +207,14 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "D.−",
+            "ordering": "D",
             "crochet": "",
             "definition": "Réaliser (à l'aide d'éléments",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "D.−",
-                "crochet": "",
-                "definition": "Réaliser (à l'aide d'éléments",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[L'obj. désigne un inanimé concr.]",
                 "definition": "Produire, fabriquer",
                 "examples": [
@@ -297,7 +228,7 @@ exports[`Should parse things correctly 1`] = `
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "",
                     "examples": [
@@ -318,7 +249,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "",
                     "examples": [
@@ -345,7 +276,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "Donner sa forme définitive à, élaborer",
                     "examples": [
@@ -363,32 +294,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "c)",
-                        "crochet": "",
-                        "definition": "Donner sa forme définitive à, élaborer",
-                        "examples": [
-                          {
-                            "text": "M. Cadet de Gassicourt, poète-pharmacien, faisant des petits vers",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Dumas fils dessinant, faisant des petits anges du Pérugin avec des ailes",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "d)",
+                    "ordering": "d",
                     "crochet": "",
                     "definition": "Le(s) rédiger",
                     "examples": [
@@ -400,28 +309,12 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "d)",
-                        "crochet": "",
-                        "definition": "Le(s) rédiger",
-                        "examples": [
-                          {
-                            "text": "J'appris à faire mes devoirs, à étudier mes leçons dans le brouhaha des voix",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[L'obj. désigne une collectivité hum.]",
                 "definition": "Donner l'existence à",
                 "examples": [],
@@ -431,29 +324,21 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "E.−",
+            "ordering": "E",
             "crochet": "",
             "definition": "Obtenir, se procurer",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "E.−",
-                "crochet": "",
-                "definition": "Obtenir, se procurer",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[Le suj. désigne une pers.; l'obj. désigne gén. un inanimé\\n                concr.]",
                 "definition": "Amasser, obtenir (en assemblant",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "Se fournir en, prendre",
                     "examples": [
@@ -471,32 +356,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "",
-                        "definition": "Se fournir en, prendre",
-                        "examples": [
-                          {
-                            "text": "Le journal ne faisant pas d'abonnements, il était sans cesse en projets, en innovations",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Gros ivrogne toujours satisfait pourvu qu'il fît son plein d'alcool",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -504,7 +367,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "Gagner, obtenir",
                     "examples": [
@@ -528,64 +391,27 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "c)",
-                        "crochet": "",
-                        "definition": "Gagner, obtenir",
-                        "examples": [
-                          {
-                            "text": "Une vingtaine d'objets dont il a fait plus de 100 000 francs",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Ce spectacle continuait de connaître la faveur du public et faisait toujours de grosses recettes",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "J'ai lu votre pièce, elle est magnifique (), et je suis sûre qu'elle peut faire beaucoup d'argent",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[Le suj. et l'obj. désignent une pers.]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[Dans une organisation]",
                     "definition": "Lever des troupes, des recrues",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "[Dans une organisation]",
-                        "definition": "Lever des troupes, des recrues",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Constituer quelqu'un prisonnier, le capturer",
                     "examples": [
@@ -597,26 +423,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Constituer quelqu'un prisonnier, le capturer",
-                        "examples": [
-                          {
-                            "text": "Le 28 et le 29, nos détachements () détruisent encore une quinzaine d'engins et font 200 prisonniers",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "L'entraîner",
                     "examples": [
@@ -628,45 +438,21 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "c)",
-                        "crochet": "",
-                        "definition": "L'entraîner",
-                        "examples": [
-                          {
-                            "text": "On se baigne. Celles des femmes dont les rondeurs sont suffisantes viennent là montrer à nu leur étalage et faire le client",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               }
             ]
           },
           {
-            "ordering": "F.−",
+            "ordering": "F",
             "crochet": "",
             "definition": "Constituer (un ensemble",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "F.−",
-                "crochet": "",
-                "definition": "Constituer (un ensemble",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "",
                 "definition": "Composer",
                 "examples": [
@@ -687,7 +473,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[En parlant du résultat d'une opération]",
                 "definition": "Constituer ensemble (quant à la quantité",
                 "examples": [
@@ -716,7 +502,7 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "G.−",
+            "ordering": "G",
             "crochet": "",
             "definition": "",
             "examples": [],
@@ -726,29 +512,21 @@ exports[`Should parse things correctly 1`] = `
         ]
       },
       {
-        "ordering": "II.−",
+        "ordering": "II",
         "crochet": "[\\n            Faire\\n            et son compl. sont l'équivalent d'un verbe d'action ou d'état;\\n            l'idée dominante est celle d'une manière d'agir ou d'une manière\\n            d'être]",
         "definition": "Donner une manière d'être à; être le sujet d'(une activité), la cause d'(un effet",
         "examples": [],
         "footnotes": "",
         "subUsages": [
           {
-            "ordering": "A.−",
+            "ordering": "A",
             "crochet": "",
             "definition": "Entreprendre et accomplir",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "A.−",
-                "crochet": "",
-                "definition": "Entreprendre et accomplir",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[L'obj. est un subst. ou un pron. neutre]",
                 "definition": "",
                 "examples": [
@@ -763,14 +541,14 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[L'obj. est un mot interr. ou un pron. antécédent d'une sub.]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[L'obj. est un pron. antécédent d'une sub.]",
                     "definition": "",
                     "examples": [
@@ -791,7 +569,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[L'obj. est un mot interr. ou concessif]",
                     "definition": "",
                     "examples": [
@@ -806,7 +584,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -816,7 +594,7 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "[L'obj. est un pron. indéf.]",
                 "definition": "",
                 "examples": [],
@@ -824,14 +602,14 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "4.",
+                "ordering": "4",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -839,7 +617,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -847,7 +625,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -857,7 +635,7 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "5.",
+                "ordering": "5",
                 "crochet": "",
                 "definition": "Agir, se comporter",
                 "examples": [
@@ -868,7 +646,7 @@ exports[`Should parse things correctly 1`] = `
                     "date": "1946"
                   },
                   {
-                    "text": "− Arrivez donc! Faites vite!",
+                    "text": "Arrivez donc! Faites vite!",
                     "author": "Audiberti",
                     "works": "Mal court,I, p. 142",
                     "date": "1947"
@@ -886,14 +664,14 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "B.−",
+            "ordering": "B",
             "crochet": "",
             "definition": "",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[Sans compl. d'obj. subst.; désignant une action spécifique]",
                 "definition": "",
                 "examples": [],
@@ -901,14 +679,14 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "Dire, exprimer, formuler",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[Le syntagme verbal est l'équivalent d'un verbe d'action]",
                     "definition": "",
                     "examples": [
@@ -929,7 +707,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[\\n                  En incise\\n                  (souvent accompagné d'un adv.)]",
                     "definition": "Dire, répondre",
                     "examples": [
@@ -941,26 +719,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "[\\n                  En incise\\n                  (souvent accompagné d'un adv.)]",
-                        "definition": "Dire, répondre",
-                        "examples": [
-                          {
-                            "text": "Fit-il, fit-elle. − Lâchez ma main, fit brutalement Steeny, et il regretta aussitôt cette inconvenance",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "[L'obj. est un subst. ou une onomat.]",
                     "definition": "Pousser, émettre",
                     "examples": [
@@ -978,51 +740,21 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "c)",
-                        "crochet": "[L'obj. est un subst. ou une onomat.]",
-                        "definition": "Pousser, émettre",
-                        "examples": [
-                          {
-                            "text": "J'entends le petit oiseau Qui fait pi i i i!",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "L'infirmière fit simplement : « Ts ts » et s'en alla",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               }
             ]
           },
           {
-            "ordering": "C.−",
+            "ordering": "C",
             "crochet": "",
             "definition": "Effectuer (un geste, un mouvement, un déplacement",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "C.−",
-                "crochet": "",
-                "definition": "Effectuer (un geste, un mouvement, un déplacement",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[L'obj. désigne un subst. d'action]",
                 "definition": "",
                 "examples": [],
@@ -1030,7 +762,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[L'obj. désigne une distance, un parcours]",
                 "definition": "Franchir, parcourir",
                 "examples": [
@@ -1050,7 +782,7 @@ exports[`Should parse things correctly 1`] = `
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[Avec un compl. de distance]",
                     "definition": "",
                     "examples": [
@@ -1065,7 +797,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Parcourir successivement ou visiter",
                     "examples": [
@@ -1089,38 +821,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Parcourir successivement ou visiter",
-                        "examples": [
-                          {
-                            "text": "Le soir, faisant trois, quatre théâtres, courant les foyers, les corridors",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Bien sûr, ils ne comptaient pas faire toute la foire, seulement quelques pas devant les premières baraques",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Les fiancés allaient danser. Nous fîmes tous les dancings d'Anvers",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -1130,50 +834,32 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "[L'obj. désigne une partie du corps]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "Prendre, montrer, offrir (un air, une expression",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "",
-                        "definition": "Prendre, montrer, offrir (un air, une expression",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Faire signe de (pour exprimer un signe de connivence avec quelqu'un et entrer en contact avec lui",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Faire signe de (pour exprimer un signe de connivence avec quelqu'un et entrer en contact avec lui",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "4.",
+                "ordering": "4",
                 "crochet": "[L'obj. précédé de l'art. déf. désigne un exercice phys.]",
                 "definition": "",
                 "examples": [],
@@ -1183,7 +869,7 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "D.−",
+            "ordering": "D",
             "crochet": "",
             "definition": "Exercer (une activité suivie de façon régulière), employer son temps à",
             "examples": [
@@ -1203,28 +889,7 @@ exports[`Should parse things correctly 1`] = `
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "D.−",
-                "crochet": "",
-                "definition": "Exercer (une activité suivie de façon régulière), employer son temps à",
-                "examples": [
-                  {
-                    "text": "Ils feront des heures supplémentaires qui leur seront comptées plus tard dans le royaume de mon père",
-                    "author": "",
-                    "works": "",
-                    "date": ""
-                  },
-                  {
-                    "text": "Le pharmacien qui herborise et qui fait de la radiesthésie",
-                    "author": "",
-                    "works": "",
-                    "date": ""
-                  }
-                ],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
@@ -1232,31 +897,22 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "Travailler dans, pratiquer le commerce de",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "",
-                        "definition": "Travailler dans, pratiquer le commerce de",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Pratiquer (un métier, une discipline",
                     "examples": [
@@ -1267,7 +923,7 @@ exports[`Should parse things correctly 1`] = `
                         "date": "1853"
                       },
                       {
-                        "text": "Aurez-vous jamais fini de faire la classe? − Je  suis professeur, Madame Marchal",
+                        "text": "Aurez-vous jamais fini de faire la classe? − Jesuis professeur, Madame Marchal",
                         "author": "Bernanos",
                         "works": "M. Ouine,p. 1545",
                         "date": "1943"
@@ -1280,38 +936,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Pratiquer (un métier, une discipline",
-                        "examples": [
-                          {
-                            "text": "Parce qu'il gagne à peu près sa vie en faisant du commerce",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Aurez-vous jamais fini de faire la classe? − Je  suis professeur, Madame Marchal",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Brunet se demande ce qu'il peut faire dans le civil. Petit commerçant? Employé?",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "Vendre",
                     "examples": [
@@ -1323,35 +951,19 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "c)",
-                        "crochet": "",
-                        "definition": "Vendre",
-                        "examples": [
-                          {
-                            "text": "Je ne me connais pas en toile; mais pour les draps j'en réponds. Seulement, si je fais les draps, il me faut un voyageur; car c'est de Sedan et d'Elbeuf que viennent les meilleures sortes",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "[L'obj. est un subst. précédé de l'art. partitif]",
                 "definition": "Pratiquer, s'adonner à",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[L'obj. désigne un sp., une discipline]",
                     "definition": "",
                     "examples": [
@@ -1366,7 +978,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[L'obj. désigne une activité]",
                     "definition": "",
                     "examples": [],
@@ -1376,7 +988,7 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "4.",
+                "ordering": "4",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
@@ -1386,7 +998,7 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "E.−",
+            "ordering": "E",
             "crochet": "",
             "definition": "Exécuter (une prescription, une obligation); accomplir le temps prescrit pour",
             "examples": [
@@ -1404,54 +1016,24 @@ exports[`Should parse things correctly 1`] = `
               }
             ],
             "footnotes": "",
-            "subUsages": [
-              {
-                "ordering": "E.−",
-                "crochet": "",
-                "definition": "Exécuter (une prescription, une obligation); accomplir le temps prescrit pour",
-                "examples": [
-                  {
-                    "text": "Elle a des principes, elle fait maigre",
-                    "author": "",
-                    "works": "",
-                    "date": ""
-                  },
-                  {
-                    "text": "Karlsbad, où j'avais été faire une cure, pour soigner je ne sais plus trop quoi",
-                    "author": "",
-                    "works": "",
-                    "date": ""
-                  }
-                ],
-                "footnotes": "",
-                "subUsages": []
-              }
-            ]
+            "subUsages": []
           },
           {
-            "ordering": "F.−",
+            "ordering": "F",
             "crochet": "",
             "definition": "Être la cause (directe ou indirecte) de, l'agent de",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "F.−",
-                "crochet": "",
-                "definition": "Être la cause (directe ou indirecte) de, l'agent de",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[Le suj. désigne une pers.]",
                 "definition": "Causer, provoquer, susciter",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[L'obj. désigne un inanimé concr.]",
                     "definition": "",
                     "examples": [
@@ -1478,7 +1060,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[L'obj. désigne un inanimé abstr.]",
                     "definition": "",
                     "examples": [
@@ -1501,14 +1083,14 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[Le suj. désigne une chose]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "Produire un effet, entraîner des conséquences",
                     "examples": [
@@ -1519,7 +1101,7 @@ exports[`Should parse things correctly 1`] = `
                         "date": "1948"
                       },
                       {
-                        "text": "Attends, petit, j'ai son nom sur les lèvres Terra Terra marquis de Terranova de Terrasecca,  rossa,  puzzosa, non, ce n'est pas cela, cela ne me revient pas, ça n'a aucune importance, le nom ne fait rien à l'affaire",
+                        "text": "Attends, petit, j'ai son nom sur les lèvres Terra Terra marquis de Terranova de Terrasecca,rossa,puzzosa, non, ce n'est pas cela, cela ne me revient pas, ça n'a aucune importance, le nom ne fait rien à l'affaire",
                         "author": "Cendrars",
                         "works": "Bourlinguer,p. 150",
                         "date": "1948"
@@ -1532,64 +1114,27 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "",
-                        "definition": "Produire un effet, entraîner des conséquences",
-                        "examples": [
-                          {
-                            "text": "Le changement d'air lui fera du bien à cette petite",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Attends, petit, j'ai son nom sur les lèvres Terra Terra marquis de Terranova de Terrasecca,  rossa,  puzzosa, non, ce n'est pas cela, cela ne me revient pas, ça n'a aucune importance, le nom ne fait rien à l'affaire",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Et quand nous serions dans la rue, quand même tu me prendrais dans la rue, qu'est-ce que cela peut faire? Que veux-tu que cela fasse?",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Être important :",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Être important :",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "Avoir pour résultat que",
                     "examples": [
@@ -1607,32 +1152,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "",
-                        "definition": "Avoir pour résultat que",
-                        "examples": [
-                          {
-                            "text": "Salammbô n'en racontait pas davantage () par un excès de candeur faisant qu'elle n'attachait guère d'importances (sic) aux baisers du soldat",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "« Lois de la représentation », qui font que nous ne pouvons penser l'être qu'en l'objectivant",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "",
                     "examples": [
@@ -1649,7 +1172,7 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "4.",
+                "ordering": "4",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
@@ -1657,7 +1180,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "5.",
+                "ordering": "5",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
@@ -1667,22 +1190,14 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "G.−",
+            "ordering": "G",
             "crochet": "[Le suj. désigne une pers. ou une chose; l'obj. est un subst.]",
             "definition": "Présenter (un aspect physique, extérieur",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "G.−",
-                "crochet": "[Le suj. désigne une pers. ou une chose; l'obj. est un subst.]",
-                "definition": "Présenter (un aspect physique, extérieur",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "",
                 "definition": "Former naturellement",
                 "examples": [
@@ -1703,7 +1218,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "Avoir pour variante morphologique ou syntaxique",
                 "examples": [],
@@ -1711,14 +1226,14 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "[Pour exprimer une mesure de l'espace ou du temps]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[Dimensions, poids, prix, volume, etc.]",
                     "definition": "Équivaloir à, égaler",
                     "examples": [
@@ -1736,49 +1251,18 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "[Dimensions, poids, prix, volume, etc.]",
-                        "definition": "Équivaloir à, égaler",
-                        "examples": [
-                          {
-                            "text": "Songez qu'à nous deux () nous ne faisions pas trente-quatre ans",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Tous comptes faits, l'emprunt de la Libération produit 165 milliards qui en feraient 1 200 d'aujourd'hui",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Mesurer",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Mesurer",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "Avoir une durée de, être en usage pendant + compl. de temps",
                     "examples": [
@@ -1790,26 +1274,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "c)",
-                        "crochet": "",
-                        "definition": "Avoir une durée de, être en usage pendant + compl. de temps",
-                        "examples": [
-                          {
-                            "text": "Qui pourrait supputer ou peser ce qu'il entre D'aliments, de boissons, au gouffre de son ventre? Un cachalot lui fait six jours, quelquefois sept",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "d)",
+                    "ordering": "d",
                     "crochet": "[Pour exprimer la durée écoulée, à partir d'une date fixe]",
                     "definition": "",
                     "examples": [
@@ -1824,7 +1292,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "e)",
+                    "ordering": "e",
                     "crochet": "[Pour exprimer une fréquence]",
                     "definition": "C'est",
                     "examples": [
@@ -1836,28 +1304,12 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "e)",
-                        "crochet": "[Pour exprimer une fréquence]",
-                        "definition": "C'est",
-                        "examples": [
-                          {
-                            "text": "S'il n'est pas arrivé, me dis-je, c'est que le métro est encore en panne; d'ailleurs, cela fait la troisième aujourd'hui. On dirait que c'est un fait exprès",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "4.",
+                "ordering": "4",
                 "crochet": "[L'obj. désigne une maladie, un trouble phys. ou psychique]",
                 "definition": "",
                 "examples": [
@@ -1876,36 +1328,28 @@ exports[`Should parse things correctly 1`] = `
         ]
       },
       {
-        "ordering": "III.−",
+        "ordering": "III",
         "crochet": "[L'existence de ce qui est désigné par l'obj. est présupposée]",
         "definition": "Déterminer (quelqu'un/quelque chose) dans un état, une qualité, une manière d'être ou d'agir",
         "examples": [],
         "footnotes": "",
         "subUsages": [
           {
-            "ordering": "A.−",
+            "ordering": "A",
             "crochet": "[Le suj. désigne une pers.; l'obj. désigne un inanimé concr.]",
             "definition": "Mettre, remettre en état, en ordre",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "A.−",
-                "crochet": "[Le suj. désigne une pers.; l'obj. désigne un inanimé concr.]",
-                "definition": "Mettre, remettre en état, en ordre",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -1913,7 +1357,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -1921,7 +1365,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "[\\n                  Faire\\n                  remplace, notamment ds la lang. fam., un verbe d'action plus\\n                  précis]",
                     "definition": "",
                     "examples": [
@@ -1950,7 +1394,7 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "Apprêter, préparer, faire cuire ou chauffer (un plat, un repas",
                 "examples": [
@@ -1967,39 +1411,22 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "B.−",
+            "ordering": "B",
             "crochet": "[L'obj. désigne une pers.]",
             "definition": "Former",
             "examples": [],
             "footnotes": "",
-            "subUsages": [
-              {
-                "ordering": "B.−",
-                "crochet": "[L'obj. désigne une pers.]",
-                "definition": "Former",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              }
-            ]
+            "subUsages": []
           },
           {
-            "ordering": "C.−",
+            "ordering": "C",
             "crochet": "",
             "definition": "Donner une qualité, un caractère, un état à",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "C.−",
-                "crochet": "",
-                "definition": "Donner une qualité, un caractère, un état à",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "",
                 "definition": "Élever au rang de, donner le titre, la dignité de",
                 "examples": [
@@ -2020,14 +1447,14 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "Rendre, faire devenir",
                     "examples": [
@@ -2045,32 +1472,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "",
-                        "definition": "Rendre, faire devenir",
-                        "examples": [
-                          {
-                            "text": "« Merci, mon bon Monsieur, merci (). Vous êtes très bon. Je prierai la Sainte Vierge de vous faire très heureux »",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "C'est dimanche, à l'heure du déjeuner, qu'on s'est aperçu que les petites manquaient. Je les avais faites belles pour la messe de huit heures",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[L'attribut est un adj. poss.]",
                     "definition": "S'approprier, se rendre maître de; adopter (un jugement, un point de vue, une attitude",
                     "examples": [
@@ -2088,51 +1493,20 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "[L'attribut est un adj. poss.]",
-                        "definition": "S'approprier, se rendre maître de; adopter (un jugement, un point de vue, une attitude",
-                        "examples": [
-                          {
-                            "text": "Un étude à laquelle a procédé le général de Larminat et dont je fais miennes toutes les conclusions",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Je déterrai cette religion féroce et je la fis mienne pour dorer ma terne vocation",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "Représenter, donner comme",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "c)",
-                        "crochet": "",
-                        "definition": "Représenter, donner comme",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
@@ -2140,7 +1514,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "4.",
+                "ordering": "4",
                 "crochet": "",
                 "definition": "Rendre",
                 "examples": [
@@ -2161,7 +1535,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "5.",
+                "ordering": "5",
                 "crochet": "",
                 "definition": "Causer, entraîner",
                 "examples": [
@@ -2178,22 +1552,14 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "D.−",
+            "ordering": "D",
             "crochet": "",
             "definition": "Changer, transformer en passant d'un état à un autre",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "D.−",
-                "crochet": "",
-                "definition": "Changer, transformer en passant d'un état à un autre",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[L'obj. désigne une pers.]",
                 "definition": "",
                 "examples": [
@@ -2214,14 +1580,14 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[L'obj. désigne une chose]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -2229,7 +1595,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Utiliser comme, aménager en",
                     "examples": [
@@ -2247,41 +1613,19 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Utiliser comme, aménager en",
-                        "examples": [
-                          {
-                            "text": "De la source, sa cuvette, La fleur, faisant son miroir, Dit : « Bonjour », à la fauvette",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "« Des assiettes! » dit-il en désignant une pile d'assiettes ébréchées au fond noirci. « Qu'est-ce que vous voulez en faire? Les manger? »",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "[Dans un cont. interr.]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[L'obj. indir. désigne une pers.]",
                     "definition": "",
                     "examples": [
@@ -2296,65 +1640,40 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[L'obj. indir. désigne un inanimé]",
                     "definition": "Où les ai-je mises ?",
                     "examples": [],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "[L'obj. indir. désigne un inanimé]",
-                        "definition": "Où les ai-je mises ?",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               }
             ]
           },
           {
-            "ordering": "E.−",
+            "ordering": "E",
             "crochet": "",
             "definition": "Représenter, tenir la place de",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "E.−",
-                "crochet": "",
-                "definition": "Représenter, tenir la place de",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[Le suj. désigne une pers.]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "Représenter (un personnage), tenir le rôle de",
                     "examples": [],
                     "footnotes": "",
                     "subUsages": [
                       {
-                        "ordering": "a)",
-                        "crochet": "",
-                        "definition": "Représenter (un personnage), tenir le rôle de",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      },
-                      {
-                        "ordering": "α)",
+                        "ordering": "α",
                         "crochet": "",
                         "definition": "",
                         "examples": [
@@ -2375,7 +1694,7 @@ exports[`Should parse things correctly 1`] = `
                         "subUsages": []
                       },
                       {
-                        "ordering": "β)",
+                        "ordering": "β",
                         "crochet": "",
                         "definition": "",
                         "examples": [],
@@ -2383,7 +1702,7 @@ exports[`Should parse things correctly 1`] = `
                         "subUsages": []
                       },
                       {
-                        "ordering": "γ)",
+                        "ordering": "γ",
                         "crochet": "",
                         "definition": "",
                         "examples": [
@@ -2400,22 +1719,14 @@ exports[`Should parse things correctly 1`] = `
                     ]
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "Exercer les fonctions, la responsabilité de",
                     "examples": [],
                     "footnotes": "",
                     "subUsages": [
                       {
-                        "ordering": "b)",
-                        "crochet": "",
-                        "definition": "Exercer les fonctions, la responsabilité de",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      },
-                      {
-                        "ordering": "α)",
+                        "ordering": "α",
                         "crochet": "[L'activité est permanente, régulière]",
                         "definition": "",
                         "examples": [
@@ -2436,7 +1747,7 @@ exports[`Should parse things correctly 1`] = `
                         "subUsages": []
                       },
                       {
-                        "ordering": "β)",
+                        "ordering": "β",
                         "crochet": "[L'activité est occasionnelle]",
                         "definition": "",
                         "examples": [
@@ -2459,22 +1770,14 @@ exports[`Should parse things correctly 1`] = `
                     ]
                   },
                   {
-                    "ordering": "c)",
+                    "ordering": "c",
                     "crochet": "",
                     "definition": "Imiter intentionnellement, chercher à passer pour",
                     "examples": [],
                     "footnotes": "",
                     "subUsages": [
                       {
-                        "ordering": "c)",
-                        "crochet": "",
-                        "definition": "Imiter intentionnellement, chercher à passer pour",
-                        "examples": [],
-                        "footnotes": "",
-                        "subUsages": []
-                      },
-                      {
-                        "ordering": "α)",
+                        "ordering": "α",
                         "crochet": "",
                         "definition": "",
                         "examples": [
@@ -2501,7 +1804,7 @@ exports[`Should parse things correctly 1`] = `
                         "subUsages": []
                       },
                       {
-                        "ordering": "β)",
+                        "ordering": "β",
                         "crochet": "",
                         "definition": "",
                         "examples": [
@@ -2518,7 +1821,7 @@ exports[`Should parse things correctly 1`] = `
                     ]
                   },
                   {
-                    "ordering": "d)",
+                    "ordering": "d",
                     "crochet": "",
                     "definition": "",
                     "examples": [],
@@ -2528,7 +1831,7 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "[Le suj. désigne un inanimé]",
                 "definition": "Tenir lieu de, faire aussi office de",
                 "examples": [
@@ -2545,22 +1848,14 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "F.−",
+            "ordering": "F",
             "crochet": "",
             "definition": "Paraître, sembler",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "F.−",
-                "crochet": "",
-                "definition": "Paraître, sembler",
-                "examples": [],
-                "footnotes": "",
-                "subUsages": []
-              },
-              {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "",
                 "definition": "Avoir l'air de, donner l'impression de",
                 "examples": [
@@ -2581,7 +1876,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "Produire tel effet, avoir telle allure",
                 "examples": [
@@ -2606,14 +1901,14 @@ exports[`Should parse things correctly 1`] = `
         ]
       },
       {
-        "ordering": "IV.−",
+        "ordering": "IV",
         "crochet": "",
         "definition": "",
         "examples": [],
         "footnotes": "",
         "subUsages": [
           {
-            "ordering": "A.−",
+            "ordering": "A",
             "crochet": "",
             "definition": "",
             "examples": [],
@@ -2621,21 +1916,21 @@ exports[`Should parse things correctly 1`] = `
             "subUsages": []
           },
           {
-            "ordering": "B.−",
+            "ordering": "B",
             "crochet": "",
             "definition": "",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "[Suivi d'un adj. ou d'un subst. gén. non déterminé; pour\\n                indiquer ou suggérer des conditions météor., climatiques ou un\\n                moment de la journée ou de la nuit]",
                 "definition": "",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "",
                     "definition": "",
                     "examples": [
@@ -2656,7 +1951,7 @@ exports[`Should parse things correctly 1`] = `
                     "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "",
                     "definition": "",
                     "examples": [
@@ -2679,7 +1974,7 @@ exports[`Should parse things correctly 1`] = `
                 ]
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "Il est agréable/ désagréable, dangereux de; cela fait du bien/ne fait pas de bien de",
                 "examples": [
@@ -2700,7 +1995,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
@@ -2710,7 +2005,7 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "C.−",
+            "ordering": "C",
             "crochet": "",
             "definition": "",
             "examples": [],
@@ -2718,14 +2013,14 @@ exports[`Should parse things correctly 1`] = `
             "subUsages": []
           },
           {
-            "ordering": "D.−",
+            "ordering": "D",
             "crochet": "",
             "definition": "",
             "examples": [],
             "footnotes": "",
             "subUsages": [
               {
-                "ordering": "1.",
+                "ordering": "1",
                 "crochet": "",
                 "definition": "",
                 "examples": [],
@@ -2733,14 +2028,14 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "2.",
+                "ordering": "2",
                 "crochet": "",
                 "definition": "Être destiné à",
                 "examples": [],
                 "footnotes": "",
                 "subUsages": [
                   {
-                    "ordering": "a)",
+                    "ordering": "a",
                     "crochet": "[Le suj. désigne une pers.]",
                     "definition": "Être prédisposé à, avoir des talents pour",
                     "examples": [
@@ -2752,26 +2047,10 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "a)",
-                        "crochet": "[Le suj. désigne une pers.]",
-                        "definition": "Être prédisposé à, avoir des talents pour",
-                        "examples": [
-                          {
-                            "text": "Elisabeth et Paul, faits pour l'enfance, continuaient à vivre comme s'ils eussent occupé deux berceaux jumeaux",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   },
                   {
-                    "ordering": "b)",
+                    "ordering": "b",
                     "crochet": "[Le suj. désigne une chose]",
                     "definition": "Avoir tel usage, être créé en vue d'un but précis",
                     "examples": [
@@ -2789,34 +2068,12 @@ exports[`Should parse things correctly 1`] = `
                       }
                     ],
                     "footnotes": "",
-                    "subUsages": [
-                      {
-                        "ordering": "b)",
-                        "crochet": "[Le suj. désigne une chose]",
-                        "definition": "Avoir tel usage, être créé en vue d'un but précis",
-                        "examples": [
-                          {
-                            "text": "L'antiquité a peut-être été faite pour être le pain des professeurs",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          },
-                          {
-                            "text": "Mais il [ le système électoral ] semblait fait tout exprès pour décourager des débuts irréguliers comme ceux de Benjamin Disraëli",
-                            "author": "",
-                            "works": "",
-                            "date": ""
-                          }
-                        ],
-                        "footnotes": "",
-                        "subUsages": []
-                      }
-                    ]
+                    "subUsages": []
                   }
                 ]
               },
               {
-                "ordering": "3.",
+                "ordering": "3",
                 "crochet": "",
                 "definition": "Être habitué à",
                 "examples": [
@@ -2831,7 +2088,7 @@ exports[`Should parse things correctly 1`] = `
                 "subUsages": []
               },
               {
-                "ordering": "4.",
+                "ordering": "4",
                 "crochet": "",
                 "definition": "C'en est fini (de",
                 "examples": [
@@ -2854,7 +2111,7 @@ exports[`Should parse things correctly 1`] = `
             ]
           },
           {
-            "ordering": "E.−",
+            "ordering": "E",
             "crochet": "",
             "definition": "",
             "examples": [],
