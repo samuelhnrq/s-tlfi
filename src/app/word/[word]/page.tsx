@@ -10,7 +10,9 @@ async function WordDetail({ params }: { params: Promise<{ word: string }> }) {
   console.log(definition);
   if (definition.length === 0) {
     return (
-      <div className="self-center text-center">Word "{word}" not found</div>
+      <div className="self-center text-center">
+        Word &quot;{word}&quot; not found
+      </div>
     );
   }
   return definition.map((x, i) => (

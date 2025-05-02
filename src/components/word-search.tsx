@@ -20,7 +20,7 @@ function WordSearch() {
         name="word"
         required
         className="input"
-        aria-description="Cherchez"
+        aria-label="Cherchez"
         placeholder="Taper une mot"
       />
       <button className="btn btn-primary">Cherchez</button>

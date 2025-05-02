@@ -36,7 +36,7 @@ function WordDisplay({
           <ul className="list list-disc ml-2">
             {usage.examples.map((x, i) => (
               <li key={i} className="ml-3 list-item">
-                "<i>{x.text}</i>" - {x.author} ({x.works} {x.date})
+                &quot;<i>{x.text}</i>&quot; - {x.author} ({x.works} {x.date})
               </li>
             ))}
           </ul>
