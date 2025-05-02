@@ -3,7 +3,7 @@ import { tn } from "@/tn";
 export default function Logo({ className }: { className?: string }) {
   return (
     <svg
-      className={tn("fill-gray-900 dark:fill-gray-300", className)}
+      className={tn("fill-gray-800 dark:fill-gray-300", className)}
       xmlns="http://www.w3.org/2000/svg"
       id="svg1"
       version="1.1"

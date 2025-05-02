@@ -68,9 +68,6 @@ function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
 
 function extractUsages(parent: Cheerio<AnyNode>): Usage[] {
   const usages: Usage[] = [];
-  // if (parent.children(".tlf_cdefinition").length > 0) {
-  //   usages.push(toBaseUsage(parent));
-  // }
   for (const usageElem of parent.children(".tlf_parah")) {
     const elem = parent.find(usageElem);
     const subs = elem.children(".tlf_parah").toArray();
@@ -101,6 +98,11 @@ async function lookupWord(word: string): Promise<Definition[]> {
     }
     for (const defRoot of contentRoot.children()) {
       const elem = $(defRoot);
+      const usages = [];
+      if (elem.children(".tlf_cdefinition").length > 0) {
+        usages.push(toBaseUsage(elem));
+      }
+      usages.push(...extractUsages(elem));
       definitions.push(
         definitionZod.parse({
           name: elem
@@ -109,7 +111,7 @@ async function lookupWord(word: string): Promise<Definition[]> {
             .first()
             .text()
             .replace(/,$/, ""),
-          usages: extractUsages($(elem)),
+          usages,
         } satisfies Definition)
       );
     }
