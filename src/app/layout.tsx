@@ -4,6 +4,7 @@ import "./globals.css";
 
 const modernAntiqua = Modern_Antiqua({
   weight: "400",
+  subsets: ["latin"],
 });
 
 const blexSerif = IBM_Plex_Serif({
