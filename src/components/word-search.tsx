@@ -1,20 +1,20 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useCallback } from "react";
+import { useActionState } from "react";
 
 function WordSearch() {
   const { push } = useRouter();
-  const redirect = useCallback(
-    (formdata: FormData) => {
+  const [, action, loading] = useActionState<undefined, FormData>(
+    (_ignored, formdata: FormData): undefined => {
       const target = formdata.get("word")?.toString();
       if (!target) return;
       push(`/word/${target}`);
     },
-    [push]
+    undefined
   );
   return (
-    <form className="flex gap-4 items-center" action={redirect}>
+    <form className="flex gap-4 items-center" action={action}>
       <input
         type="text"
         name="word"
@@ -23,7 +23,9 @@ function WordSearch() {
         aria-label="Cherchez"
         placeholder="Taper une mot"
       />
-      <button className="btn btn-primary">Cherchez</button>
+      <button className="btn btn-primary" disabled={loading}>
+        Cherchez
+      </button>
     </form>
   );
 }

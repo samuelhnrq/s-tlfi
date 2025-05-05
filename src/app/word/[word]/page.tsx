@@ -7,7 +7,6 @@ export const dynamicParams = true; // or false, to 404 on unknown paths
 async function WordDetail({ params }: { params: Promise<{ word: string }> }) {
   const { word } = await params;
   const definition = await lookupWord(word);
-  console.log(definition);
   if (definition.length === 0) {
     return (
       <div className="self-center text-center">
