@@ -13,7 +13,7 @@ function WordLayout({ children }: React.PropsWithChildren) {
         </Link>
         <WordSearch />
       </nav>
-      <main className="flex grow flex-col">{children}</main>
+      <main className="flex grow flex-col w-full">{children}</main>
       <BackdropLogo />
     </div>
   );

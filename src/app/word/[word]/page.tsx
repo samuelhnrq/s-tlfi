@@ -1,5 +1,5 @@
 import { lookupWord } from "@/tlfi-client";
-import WordDisplay from "./word-display";
+import DefinitionsBar from "./definitions-bar";
 
 export const revalidate = 60;
 export const dynamicParams = true; // or false, to 404 on unknown paths
@@ -15,18 +15,14 @@ async function WordDetail({ params }: { params: Promise<{ word: string }> }) {
     );
   }
   return definition.map((x, i) => (
-    <div key={x.name + i} id={`${x.name}-${i}`}>
+    <div key={x.name + i} id={`${x.name}-${i}`} className="w-full">
       <h1
         className="font-display text-6xl ml-6 mb-8 mt-12 truncate capitalize w-full"
         style={{ lineHeight: 1.2 }}
       >
         {x.name.toLocaleLowerCase()}
       </h1>
-      <div className="card dark:bg-gray-900/40 bg-gray-200/30 p-4 rounded-lg backdrop-blur-xs flex-col">
-        {x.usages.map((x) => (
-          <WordDisplay key={x.ordering} usage={x} />
-        ))}
-      </div>
+      <DefinitionsBar usages={x.usages} />
     </div>
   ));
 }
