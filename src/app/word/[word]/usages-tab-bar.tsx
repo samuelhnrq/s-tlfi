@@ -1,0 +1,26 @@
+import type { Usage } from "@/tlfi-client";
+import WordDisplay from "./word-display";
+import { Fragment } from "react";
+
+function UsagesTabBar({ usages, index }: { usages: Usage[]; index: number }) {
+  return (
+    <div role="tablist" className="tabs tabs-border">
+      {usages.map((usage, i) => (
+        <Fragment key={usage.ordering}>
+          <input
+            type="radio"
+            name={`word-usage-${index}`}
+            className="tab"
+            defaultChecked={i === 0}
+            aria-label={`Usage ${usage.ordering}`}
+          />
+          <div className="tab-content py-4 px-2">
+            <WordDisplay usage={usage} key={usage.ordering} />
+          </div>
+        </Fragment>
+      ))}
+    </div>
+  );
+}
+
+export default UsagesTabBar;
