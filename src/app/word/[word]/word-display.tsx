@@ -11,11 +11,9 @@ function WordDisplay({
   parents?: Usage[];
 }) {
   const hasValue = !!usage.definition || !!usage.crochet;
-  const orderings = parents
-    .map((x) => x.ordering.replace(/\.$/, ""))
-    .filter((x) => !!x.trim());
+  const orderings = parents.map((x) => x.ordering).filter((x) => !!x.trim());
   orderings.push(usage.ordering, "");
-  const ordering = orderings.join(". ");
+  const ordering = orderings.join(". ").replace(/\.$|(\.)\.+/g, "$1");
   const hasParents = parents.some((x) => x.crochet || x.definition);
   const hasChildren = usage.subUsages?.length > 0;
   return (

@@ -18,7 +18,7 @@ async function WordDetail({ params }: { params: Promise<{ word: string }> }) {
   return (
     <div
       role="tablist"
-      className="tabs tabs-border dark:bg-gray-900/40 bg-gray-200/30 p-4 rounded-lg backdrop-blur-xs w-full"
+      className="tabs tabs-border dark:bg-gray-900/40 bg-gray-200/30 p-4 mt-6 rounded-lg backdrop-blur-xs w-full"
     >
       {definition.map((x, i) => (
         <Fragment key={x.name + i}>
