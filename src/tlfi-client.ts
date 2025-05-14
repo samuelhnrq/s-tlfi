@@ -1,7 +1,6 @@
 import { load, type Cheerio } from "cheerio";
 import type { AnyNode } from "domhandler";
 import ky from "ky";
-import { unstable_cache } from "next/cache";
 import { z } from "zod";
 
 const example = z.object({
@@ -32,7 +31,7 @@ function clearStr(txt: string): string {
   return txt
     .replaceAll(/\s{2,}/gm, " ")
     .replaceAll(/([,\.\-\)\(])\1+/g, "$1")
-    .replaceAll(/^\s*[,\-\.\(\)]\s*|\s*[\.,\-\(\)]\s*$/g, "");
+    .replaceAll(/^\s*[,\-\.]\s*|\s*[,\-]\s*$/g, "");
 }
 
 function cleanOrdering(txt: string): string {
@@ -88,15 +87,13 @@ function usagesInLevel(parent: Cheerio<AnyNode>): Usage[] {
   return usages;
 }
 
-const fetchWord = unstable_cache(
-  async (word: string, nth: number): Promise<string> => {
-    const url = `https://www.cnrtl.fr/definition/${word}/${nth}?ajax=true`;
-    console.log("fetching");
-    const definition = await ky(url).text();
-    console.log("fetched and loaded", word, url);
-    return definition;
-  }
-);
+const fetchWord = async (word: string, nth: number): Promise<string> => {
+  const url = `https://www.cnrtl.fr/definition/${word}/${nth}?ajax=true`;
+  console.log("fetching");
+  const definition = await ky(url).text();
+  console.log("fetched and loaded", word, url);
+  return definition;
+};
 
 async function tabNames(word: string) {
   const definition = await fetchWord(word, 0);

@@ -1,5 +1,6 @@
 import { tabNames } from "@/tlfi-client";
 import clsx from "clsx";
+import { unstable_cache } from "next/cache";
 import Link from "next/link";
 
 type WordDetailParams = { word: string; definition: string };
@@ -7,11 +8,12 @@ type WordDetailProps = {
   params: Promise<WordDetailParams>;
   children: React.ReactNode;
 };
+const cachedTabNames = unstable_cache(tabNames);
 
 async function WordDetail({ params, children }: WordDetailProps) {
   const { word, definition: defStr } = await params;
   const definitionNumber = parseInt(defStr, 10) - 1;
-  const pageNames = await tabNames(word);
+  const pageNames = await cachedTabNames(word);
   return (
     <div className="max-w-full overflow-x-auto my-4">
       <div role="tablist" className="tabs tabs-lift">
