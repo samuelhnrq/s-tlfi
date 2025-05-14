@@ -9,7 +9,7 @@ function WordSearch() {
     (_ignored, formdata: FormData): undefined => {
       const target = formdata.get("word")?.toString();
       if (!target) return;
-      push(`/word/${target}`);
+      push(`/word/${target}/1`);
     },
     undefined
   );

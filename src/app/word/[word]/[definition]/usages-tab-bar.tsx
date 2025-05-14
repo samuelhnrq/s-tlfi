@@ -1,5 +1,5 @@
 import type { Usage } from "@/tlfi-client";
-import WordDisplay from "./word-display";
+import WordDisplay from "@/components/word-display";
 import { Fragment } from "react";
 
 function UsagesTabBar({ usages, index }: { usages: Usage[]; index: number }) {

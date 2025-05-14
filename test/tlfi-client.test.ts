@@ -26,7 +26,7 @@ it("should parse simple case", async (t) => {
       },
     }
   );
-  const res = await mocked.lookupWord("lynx");
+  const res = await mocked.lookupWord("lynx", 0);
   t.assert.snapshot(res);
 });
 
@@ -44,25 +44,20 @@ it("Should parse things correctly", async (t) => {
       },
     }
   );
-  const res = await mocked.lookupWord("faire");
-  t.assert.snapshot(res);
+  const res = await mocked.lookupWord("faire", 0);
   expect(res)
     .to.be.an("array")
-    .of.length(1)
-    .and.property("0")
-    .to.be.an("object")
-    .and.include({ name: "FAIRE" })
-    .and.property("usages")
-    .to.be.an("array")
-    .of.length(4)
+    .of.length(4, "Should have all the definitions")
     .and.property("0")
     .to.be.an("object")
     .and.include({
+      name: "FAIRE (verbe trans.)",
       ordering: "I",
       crochet: "[Le suj. désigne un animé]",
-      definition: "Donner l'être, l'existence à, être l'auteur de",
+      definition: "Donner l'être, l'existence à, être l'auteur de.",
     })
     .and.property("subUsages")
     .to.be.an("array")
     .of.length(7);
+  t.assert.snapshot(res);
 });

@@ -1,8 +1,8 @@
 import React from "react";
-import BackdropLogo from "../../components/backdrop-logo";
+import BackdropLogo from "@/components/backdrop-logo";
 import WordSearch from "@/components/word-search";
 import Link from "next/link";
-import Logo from "../../components/logo";
+import Logo from "@/components/logo";
 
 function WordLayout({ children }: React.PropsWithChildren) {
   return (

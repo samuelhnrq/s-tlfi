@@ -1,6 +1,7 @@
 import { load, type Cheerio } from "cheerio";
 import type { AnyNode } from "domhandler";
 import ky from "ky";
+import { unstable_cache } from "next/cache";
 import { z } from "zod";
 
 const example = z.object({
@@ -11,6 +12,7 @@ const example = z.object({
 });
 
 const baseUsage = z.object({
+  name: z.string().trim(),
   ordering: z.string().trim(),
   crochet: z.string().trim(),
   definition: z.string().trim(),
@@ -24,28 +26,24 @@ const usage: z.ZodType<Usage> = baseUsage.extend({
   subUsages: z.lazy(() => z.array(usage)),
 });
 
-const definitionZod = z.object({
-  name: z.string().nonempty().trim(),
-  usages: z.array(usage),
-});
-
-export type Definition = z.infer<typeof definitionZod>;
 type Example = z.infer<typeof example>;
 
 function clearStr(txt: string): string {
   return txt
-    .replaceAll(/\s{2,}/g, " ")
-    .replaceAll(/[,\.-]{2,}|\s+[,\.-]+\s+/gm, "")
-    .trim()
-    .replaceAll(/^[)(,\.−]+\s*|\s*[)(,\.−]+$/gm, " ");
+    .replaceAll(/\s{2,}/gm, " ")
+    .replaceAll(/([,\.\-\)\(])\1+/g, "$1")
+    .replaceAll(/^\s*[,\-\.\(\)]\s*|\s*[\.,\-\(\)]\s*$/g, "");
+}
+
+function cleanOrdering(txt: string): string {
+  return txt.replaceAll(/[\−\-\.)(]+/g, "");
 }
 
 function toExample(elem: Cheerio<AnyNode>): Example {
   return {
-    works: clearStr(
-      elem.find(".tlf_ctitre").remove().text() +
-        elem.contents().last().remove().text()
-    ),
+    works:
+      clearStr(elem.find(".tlf_ctitre").remove().text()) +
+      clearStr(elem.contents().last().remove().text()),
     date: clearStr(elem.find(".tlf_cdate").remove().text()),
     author: clearStr(elem.find(".tlf_cauteur").remove().text()),
     text: clearStr(elem.text()),
@@ -53,10 +51,17 @@ function toExample(elem: Cheerio<AnyNode>): Example {
 }
 
 function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
+  const parentHeader = elem
+    .parentsUntil("#lexicontent")
+    .find(".tlf_cvedette")
+    .clone();
+  const parentName = parentHeader.find(".tlf_cmot").contents().first().text();
+  parentHeader.find(".tlf_cmot").remove();
   return {
+    name: clearStr(`${parentName} (${parentHeader.text().trim()})`),
     crochet: elem.children(".tlf_ccrochet").text(),
     definition: clearStr(elem.children(".tlf_cdefinition").first().text()),
-    ordering: clearStr(elem.children(".tlf_cplan").text()),
+    ordering: cleanOrdering(elem.children(".tlf_cplan").text()),
     footnotes: clearStr(elem.children(".tlf_parothers").text()),
     subUsages: [],
     examples: elem
@@ -66,7 +71,7 @@ function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
   };
 }
 
-function extractUsages(parent: Cheerio<AnyNode>): Usage[] {
+function usagesInLevel(parent: Cheerio<AnyNode>): Usage[] {
   const usages: Usage[] = [];
   for (const usageElem of parent.children(".tlf_parah")) {
     const elem = parent.find(usageElem);
@@ -76,50 +81,54 @@ function extractUsages(parent: Cheerio<AnyNode>): Usage[] {
       subUsages: subs.map((x) => toBaseUsage(parent.find(x))),
     };
     for (let i = 0; i < subs.length; i++) {
-      next.subUsages[i].subUsages = extractUsages(parent.find(subs[i]));
+      next.subUsages[i].subUsages = usagesInLevel(parent.find(subs[i]));
     }
     usages.push(next);
   }
   return usages;
 }
 
-async function lookupWord(word: string): Promise<Definition[]> {
-  const definitions: Definition[] = [];
-  let i = 0;
-  while (true) {
-    const url = `https://www.cnrtl.fr/definition/${word}/${i++}?ajax=true`;
+const fetchWord = unstable_cache(
+  async (word: string, nth: number): Promise<string> => {
+    const url = `https://www.cnrtl.fr/definition/${word}/${nth}?ajax=true`;
     console.log("fetching");
     const definition = await ky(url).text();
-    const $ = load(definition);
-    const contentRoot = $("#lexicontent");
-    console.log("fetched and loaded", i, url);
-    if (contentRoot.children.length === 0) {
-      break;
-    }
-    for (const defRoot of contentRoot.children()) {
-      const elem = $(defRoot);
-      const usages = [];
-      if (elem.children(".tlf_cdefinition").length > 0) {
-        usages.push(toBaseUsage(elem));
-      }
-      usages.push(...extractUsages(elem));
-      definitions.push(
-        definitionZod.parse({
-          name: elem
-            .find(".tlf_cvedette > .tlf_cmot")
-            .contents()
-            .first()
-            .text()
-            .replace(/,$/, ""),
-          usages,
-        } satisfies Definition)
-      );
-    }
-    if (i >= $("#vtoolbar li").length) {
-      break;
-    }
+    console.log("fetched and loaded", word, url);
+    return definition;
   }
-  return definitions;
+);
+
+async function tabNames(word: string) {
+  const definition = await fetchWord(word, 0);
+  const $ = load(definition);
+  const names: string[] = [];
+  $("#vtoolbar li").each((_, elem) => {
+    const name = $(elem).text().trim();
+    if (name) {
+      names.push(name);
+    }
+  });
+  return names;
 }
 
-export { lookupWord };
+async function lookupWord(word: string, page: number): Promise<Usage[]> {
+  const usages: Usage[] = [];
+  const definition = await fetchWord(word, page);
+  const $ = load(definition);
+  if (page >= $("#vtoolbar li").length) {
+    throw new Error("Page not found");
+  }
+  const contentRoot = $("#lexicontent");
+  for (const defRoot of contentRoot.children()) {
+    const elem = $(defRoot);
+    if (elem.children(".tlf_cdefinition").length > 0) {
+      console.log("Father is itself a definition");
+      usages.push(toBaseUsage(elem));
+    }
+    usages.push(...usagesInLevel(elem));
+  }
+
+  return usage.array().parse(usages);
+}
+
+export { lookupWord, tabNames };
