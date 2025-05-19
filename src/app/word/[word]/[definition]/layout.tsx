@@ -21,7 +21,6 @@ async function WordDetail({ params, children }: WordDetailProps) {
           <Link
             key={pageName}
             className={clsx("tab", { "tab-active": i === definitionNumber })}
-            defaultChecked={i === 0}
             href={`/word/${word}/${i + 1}`}
           >
             {pageName}

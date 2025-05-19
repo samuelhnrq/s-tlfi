@@ -32,10 +32,10 @@ function WordDisplay({
       <span>{usage.definition}</span>
       <div className={clsx({ "pl-6 mt-3": hasValue && hasChildren })}>
         {hasChildren &&
-          usage.subUsages.map((x) => (
+          usage.subUsages.map((x, i) => (
             <WordDisplay
               usage={x}
-              key={x.ordering}
+              key={x.ordering + i}
               parents={[...parents, usage]}
             />
           ))}

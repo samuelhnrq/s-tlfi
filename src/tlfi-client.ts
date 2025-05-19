@@ -64,9 +64,13 @@ function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
     footnotes: clearStr(elem.children(".tlf_parothers").text()),
     subUsages: [],
     examples: elem
-      .children(".tlf_cexemple")
+      .find(".tlf_cexemple")
       .toArray()
-      .map((x) => toExample(elem.find(x))),
+      .map((x) => {
+        const res = toExample(elem.find(x));
+        elem.find(x).remove();
+        return res;
+      }),
   };
 }
 
@@ -74,7 +78,7 @@ function usagesInLevel(parent: Cheerio<AnyNode>): Usage[] {
   const usages: Usage[] = [];
   for (const usageElem of parent.children(".tlf_parah")) {
     const elem = parent.find(usageElem);
-    const subs = elem.children(".tlf_parah").toArray();
+    const subs = elem.children(".tlf_parah,.tlf_paraputir").toArray();
     const next: Usage = {
       ...toBaseUsage(elem),
       subUsages: subs.map((x) => toBaseUsage(parent.find(x))),
@@ -89,9 +93,7 @@ function usagesInLevel(parent: Cheerio<AnyNode>): Usage[] {
 
 const fetchWord = async (word: string, nth: number): Promise<string> => {
   const url = `https://www.cnrtl.fr/definition/${word}/${nth}?ajax=true`;
-  console.log("fetching");
-  const definition = await ky(url).text();
-  console.log("fetched and loaded", word, url);
+  const definition = await ky(url, { cache: "force-cache" }).text();
   return definition;
 };
 
@@ -119,7 +121,6 @@ async function lookupWord(word: string, page: number): Promise<Usage[]> {
   for (const defRoot of contentRoot.children()) {
     const elem = $(defRoot);
     if (elem.children(".tlf_cdefinition").length > 0) {
-      console.log("Father is itself a definition");
       usages.push(toBaseUsage(elem));
     }
     usages.push(...usagesInLevel(elem));
