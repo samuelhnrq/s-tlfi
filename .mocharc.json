@@ -1,0 +1,7 @@
+{
+  "extension": ["ts", "tsx"],
+  "require": ["tsx", "./mocha.setup.ts"],
+  "watchFiles": ["src", "test"],
+  "watchIgnore": [".next", "node_modules", ".git"],
+  "ui": "bdd"
+}

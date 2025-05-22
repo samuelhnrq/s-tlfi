@@ -15,6 +15,12 @@ const eslintConfig = defineConfig([
   {
     ignores: [".next", "node_modules"],
   },
+  {
+    files: ["test/**/*.ts", "test/**/*.tsx"],
+    rules: {
+      "@typescript-eslint/no-unused-expressions": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

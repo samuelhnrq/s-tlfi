@@ -1,5 +1,6 @@
 import { lookupWord, type Usage } from "@/tlfi-client";
 import WordDisplay from "@/components/word-display";
+import React from "react";
 
 export const revalidate = 60;
 export const dynamicParams = true; // or false, to 404 on unknown paths

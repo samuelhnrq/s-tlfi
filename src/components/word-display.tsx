@@ -1,5 +1,6 @@
 import type { Usage } from "@/tlfi-client";
 import clsx from "clsx";
+import React from "react";
 
 function WordDisplay({
   usage,
