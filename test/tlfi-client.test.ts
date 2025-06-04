@@ -26,17 +26,34 @@ it("Should parse things correctly", async () => {
   nocked().get("/definition/faire/0?ajax=true").reply(200, textExample);
   const res = await lookupWord("faire", 0);
   expect(res)
+    .to.be.an("object")
+    .and.property("definitions")
     .to.be.an("array")
     .of.length(4, "Should have all the definitions")
     .and.property("0")
     .to.be.an("object")
     .and.include({
-      name: "FAIRE (verbe trans.)",
       ordering: "I",
       crochet: "[Le suj. désigne un animé]",
       definition: "Donner l'être, l'existence à, être l'auteur de.",
     })
-    .and.property("subUsages")
+    .and.property("children")
+    .to.be.an("array")
+    .of.length(7);
+});
+
+it('should parse the "cheval" example', async () => {
+  const textExample = await readHtml("cheval.html");
+  nocked().get("/definition/cheval/0?ajax=true").reply(200, textExample);
+  const res = await lookupWord("cheval", 0);
+  expect(res)
+    .to.be.an("object")
+    .and.property("definitions")
+    .to.be.an("array")
+    .of.length(3)
+    .and.property("0")
+    .to.be.an("object")
+    .and.property("examples")
     .to.be.an("array")
     .of.length(7);
 });

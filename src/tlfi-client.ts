@@ -10,8 +10,7 @@ const example = z.object({
   date: z.string().trim(),
 });
 
-const baseUsage = z.object({
-  name: z.string().trim(),
+const baseDefinition = z.object({
   ordering: z.string().trim(),
   crochet: z.string().trim(),
   definition: z.string().trim(),
@@ -19,13 +18,21 @@ const baseUsage = z.object({
   footnotes: z.string().trim(),
 });
 
-export type Usage = z.infer<typeof baseUsage> & { subUsages: Usage[] };
+export type Definition = z.infer<typeof baseDefinition> & {
+  children: Definition[];
+};
 
-const usage: z.ZodType<Usage> = baseUsage.extend({
-  subUsages: z.lazy(() => z.array(usage)),
+const definition: z.ZodType<Definition> = baseDefinition.extend({
+  children: z.lazy(() => z.array(definition)),
+});
+
+const word = z.object({
+  name: z.string().trim(),
+  definitions: z.array(definition),
 });
 
 type Example = z.infer<typeof example>;
+export type Word = z.infer<typeof word>;
 
 function clearStr(txt: string): string {
   return txt
@@ -49,20 +56,13 @@ function toExample(elem: Cheerio<AnyNode>): Example {
   };
 }
 
-function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
-  const parentHeader = elem
-    .parentsUntil("#lexicontent")
-    .find(".tlf_cvedette")
-    .clone();
-  const parentName = parentHeader.find(".tlf_cmot").contents().first().text();
-  parentHeader.find(".tlf_cmot").remove();
+function toDefinition(elem: Cheerio<AnyNode>): Definition {
   return {
-    name: clearStr(`${parentName} (${parentHeader.text().trim()})`),
     crochet: elem.children(".tlf_ccrochet").text(),
     definition: clearStr(elem.children(".tlf_cdefinition").first().text()),
     ordering: cleanOrdering(elem.children(".tlf_cplan").text()),
     footnotes: clearStr(elem.children(".tlf_parothers").text()),
-    subUsages: [],
+    children: [],
     examples: elem
       .find(".tlf_cexemple")
       .toArray()
@@ -74,17 +74,17 @@ function toBaseUsage(elem: Cheerio<AnyNode>): Usage {
   };
 }
 
-function usagesInLevel(parent: Cheerio<AnyNode>): Usage[] {
-  const usages: Usage[] = [];
+function usagesInLevel(parent: Cheerio<AnyNode>): Definition[] {
+  const usages: Definition[] = [];
   for (const usageElem of parent.children(".tlf_parah")) {
     const elem = parent.find(usageElem);
     const subs = elem.children(".tlf_parah,.tlf_paraputir").toArray();
-    const next: Usage = {
-      ...toBaseUsage(elem),
-      subUsages: subs.map((x) => toBaseUsage(parent.find(x))),
+    const next: Definition = {
+      ...toDefinition(elem),
+      children: subs.map((x) => toDefinition(parent.find(x))),
     };
     for (let i = 0; i < subs.length; i++) {
-      next.subUsages[i].subUsages = usagesInLevel(parent.find(subs[i]));
+      next.children[i].children = usagesInLevel(parent.find(subs[i]));
     }
     usages.push(next);
   }
@@ -110,9 +110,9 @@ async function tabNames(word: string) {
   return names;
 }
 
-async function lookupWord(word: string, page: number): Promise<Usage[]> {
-  const usages: Usage[] = [];
-  const definition = await fetchWord(word, page);
+async function lookupWord(q: string, page: number): Promise<Word> {
+  const definitions: Definition[] = [];
+  const definition = await fetchWord(q, page);
   const $ = load(definition);
   if (page >= $("#vtoolbar li").length) {
     throw new Error("Page not found");
@@ -121,12 +121,16 @@ async function lookupWord(word: string, page: number): Promise<Usage[]> {
   for (const defRoot of contentRoot.children()) {
     const elem = $(defRoot);
     if (elem.children(".tlf_cdefinition").length > 0) {
-      usages.push(toBaseUsage(elem));
+      definitions.push(toDefinition(elem));
     }
-    usages.push(...usagesInLevel(elem));
+    definitions.push(...usagesInLevel(elem));
   }
+  const name = contentRoot.find(".tlf_cvedette").text().trim();
 
-  return usage.array().parse(usages);
+  return word.parse({
+    name,
+    definitions,
+  });
 }
 
 export { lookupWord, tabNames };

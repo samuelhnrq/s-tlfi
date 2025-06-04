@@ -26,4 +26,11 @@ it("should render the WordDetail component correctly", async () => {
       exact: false,
     })
   ).to.be.visible;
+
+  // Check if the WordDisplay component is rendered
+  expect(
+    screen.getByText("regard de lynx", {
+      exact: false,
+    })
+  ).to.be.visible;
 });

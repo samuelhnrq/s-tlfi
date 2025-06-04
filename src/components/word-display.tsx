@@ -1,22 +1,22 @@
-import type { Usage } from "@/tlfi-client";
+import type { Definition } from "@/tlfi-client";
 import clsx from "clsx";
 import React from "react";
 
 function WordDisplay({
-  usage,
+  definition,
   parents = [],
   id,
 }: {
-  usage: Usage;
+  definition: Definition;
   id?: string;
-  parents?: Usage[];
+  parents?: Definition[];
 }) {
-  const hasValue = !!usage.definition || !!usage.crochet;
+  const hasValue = !!definition.definition || !!definition.crochet;
   const orderings = parents.map((x) => x.ordering).filter((x) => !!x.trim());
-  orderings.push(usage.ordering, "");
+  orderings.push(definition.ordering, "");
   const ordering = orderings.join(". ").replace(/\.$|(\.)\.+/g, "$1");
   const hasParents = parents.some((x) => x.crochet || x.definition);
-  const hasChildren = usage.subUsages?.length > 0;
+  const hasChildren = definition.children?.length > 0;
   return (
     <div
       className={clsx(
@@ -28,24 +28,24 @@ function WordDisplay({
       id={id}
     >
       {hasValue && ordering}
-      {usage.crochet && <i>{usage.crochet}</i>}
-      {!!usage.definition && !!usage.crochet && " - "}
-      <span>{usage.definition}</span>
+      {definition.crochet && <i>{definition.crochet}</i>}
+      {!!definition.definition && !!definition.crochet && " - "}
+      <span>{definition.definition}</span>
       <div className={clsx({ "pl-6 mt-3": hasValue && hasChildren })}>
         {hasChildren &&
-          usage.subUsages.map((x, i) => (
+          definition.children.map((x, i) => (
             <WordDisplay
-              usage={x}
+              definition={x}
               key={x.ordering + i}
-              parents={[...parents, usage]}
+              parents={[...parents, definition]}
             />
           ))}
       </div>
-      {usage.examples.length > 0 && (
+      {definition.examples.length > 0 && (
         <>
           <div className="font-bold mt-2 text-md">Examples</div>
           <ul className="list list-disc ml-2">
-            {usage.examples.map((x, i) => (
+            {definition.examples.map((x, i) => (
               <li key={i} className="ml-3 list-item">
                 &quot;<i>{x.text}</i>&quot; - {x.author} ({x.works} {x.date})
               </li>

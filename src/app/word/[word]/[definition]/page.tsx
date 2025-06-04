@@ -1,4 +1,4 @@
-import { lookupWord, type Usage } from "@/tlfi-client";
+import { lookupWord, type Definition } from "@/tlfi-client";
 import WordDisplay from "@/components/word-display";
 import React from "react";
 
@@ -10,9 +10,9 @@ type WordDetailParams = { word: string; definition: string };
 async function WordDetail({ params }: { params: Promise<WordDetailParams> }) {
   const { word, definition: defStr } = await params;
   const definitionNumber = parseInt(defStr, 10) - 1;
-  let definition: Usage[] = [];
+  let definition: Definition[] = [];
   try {
-    definition = await lookupWord(word, definitionNumber);
+    definition = (await lookupWord(word, definitionNumber)).definitions;
   } catch {}
   if (definition.length === 0) {
     return (
@@ -24,7 +24,7 @@ async function WordDetail({ params }: { params: Promise<WordDetailParams> }) {
   return (
     <>
       {definition.map((x, i) => (
-        <WordDisplay usage={x} key={x.ordering + i} />
+        <WordDisplay definition={x} key={x.ordering + i} />
       ))}
     </>
   );

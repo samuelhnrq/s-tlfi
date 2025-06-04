@@ -1,8 +1,14 @@
-import type { Usage } from "@/tlfi-client";
+import type { Definition } from "@/tlfi-client";
 import WordDisplay from "@/components/word-display";
 import { Fragment } from "react";
 
-function UsagesTabBar({ usages, index }: { usages: Usage[]; index: number }) {
+function UsagesTabBar({
+  usages,
+  index,
+}: {
+  usages: Definition[];
+  index: number;
+}) {
   return (
     <div role="tablist" className="tabs tabs-border">
       {usages.map((usage, i) => (
@@ -15,7 +21,7 @@ function UsagesTabBar({ usages, index }: { usages: Usage[]; index: number }) {
             aria-label={`Usage ${usage.ordering}`}
           />
           <div className="tab-content py-4 px-2">
-            <WordDisplay usage={usage} key={usage.ordering} />
+            <WordDisplay definition={usage} key={usage.ordering} />
           </div>
         </Fragment>
       ))}
